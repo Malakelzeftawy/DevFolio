@@ -1,0 +1,304 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(245, 243, 243);
+}
+nav .container .home::before{
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: white;
+    transform: translateX(15%);
+}
+nav .container .line::before {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 2px;
+   bottom: -3px;
+   left: 0;
+   background-color: white; 
+   transform: translateX(15%);
+   visibility: hidden;
+   transition: all 300ms linear;
+}
+nav .container .line:hover::before {
+    visibility: visible;
+    width: 65%;
+}
+.landing {
+    background-image: linear-gradient(rgb(0,0,0,0.4) , rgb(0,0,0,0.9)), url("../images/hero-bg.jpg");
+    height: 100vh;
+    background-size: cover;
+} 
+.landing h1 {
+    font-size: 65px;
+}
+.landing h2 span {
+    display: inline-block;
+    overflow:hidden;
+    font-family: "Roboto Mono", monospace;
+    font-size: 40px;
+
+}
+.landing h2 .designer {
+    animation: designer 8s infinite;
+}
+.landing h2 .developer {
+    animation: developer 8s infinite;
+}
+.landing h2 .freelancer {
+    animation: freelancer 8s infinite;
+}
+.landing h2 .photographer {
+    animation: photographer 8s infinite;
+}
+@keyframes designer {
+    0% , 25% , 37% , 50% , 62.5% , 75% , 87.5% ,100% {
+        width: 0;
+    }    
+    12.5% {
+        width: calc(24px * 8);
+    }
+}
+@keyframes developer {
+    0% , 12.5% , 25% , 50% , 62.5% , 75% , 87.5%, 100%{
+        width: 0;
+    }
+    37.5% {
+        width: calc(24px * 9);
+    }
+}
+@keyframes freelancer {
+    0% , 12.5% , 25% , 37.5% , 50% , 75% , 87.5% , 100% {
+        width: 0;
+    }
+    62.5% {
+        width: calc(24px * 10);
+    }
+}
+@keyframes photographer {
+    0% , 12.5% , 25% , 37.5% , 50% , 62.5% , 75% , 100% {
+        width: 0;
+    } 
+    87.5% {
+        width: calc(24px * 12);
+    }
+}
+.landing h2::before {
+    content: "";
+    position: absolute;
+    width: 5px ;
+    height: 90%;
+    background-color: white;
+    right: 0;
+}
+
+.about .container .about-info p {
+    font-size: 16px;
+}
+.about .container .skill-mf p {
+    font-size: 22px;
+}
+.about .container .title-left {
+    font-size: 35px;
+    font-weight: 400;
+    position: relative;
+}
+.about .container .title-left::before {
+    content: "";
+    position: absolute;
+    background-color: #0078FF;
+    width: 20%;
+    height: 3px;
+    left: 0;
+    bottom: -10px;
+}
+.about .container .paragraph {
+    line-height: 35px;
+}
+ .container .heading {
+    margin: 90px 0px
+}
+.container .heading h1 {
+    font-size: 45px;
+}
+ .container .heading p::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    background-color: #0078FF;
+    height: 8px;
+}
+.services .inner .icon i {
+    border: #0078FF 8px solid;
+    border-radius: 50%;
+    padding: 25px;
+    font-size: 45px;
+    background-color: white;
+    transition: all 300ms linear;
+}
+.services .inner .icon:hover i {
+    border: #99c3f3 8px solid;
+    background-color: rgb(0, 120, 255);
+    color: white;
+}
+.overlay {
+    background-image: linear-gradient(rgb(0,120,255,0.7) , rgb(0,120,255,0.8)), url("../images/counters-bg.jpg");
+    height: 400px;
+    background-position: top center;
+}
+.overlay .container .icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+}
+.overlay .container .icon-box i {
+    font-size: 40px;
+    position: relative; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.overlay .container .icon-box-2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 8px rgb(223, 218, 218) solid;
+}
+.work .container .paragraph-two {
+    font-size: 14px;
+} 
+.work .container .icon i {
+    font-size: 40px;
+    color: #0078FF;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.work .container .icon {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #0078FF;
+    border-radius: 50%;
+    position: relative;
+}
+.work .container .card-info:hover img {
+    transform: scale(1.4);
+}
+.work .container .image {
+    overflow: hidden;
+}
+.work .container .image img {
+    transition: all 500ms linear;
+}
+ .overlay-two {
+    background-image: linear-gradient(rgb(0,120,255,0.8) , rgb(0,120,255,0.8)), url("../images/overlay-bg.jpg");
+    background-size: cover;
+} 
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.plog .box .line {
+    position: relative;
+}
+.plog .box .line::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
+    height: 1px;
+    background-color: rgb(211, 203, 203);
+}
+.plog .inner {
+    border: 2px solid rgb(211, 203, 203);
+}
+.contact {
+    height: fit-content;
+    background-image: linear-gradient(rgb(0,120,255,0.8) , rgb(0,120,255,0.8)), url("../images/overlay-bg.jpg");
+    background-size: cover;
+}
+footer {
+    background-color:rgb(0, 100, 255) ;
+}
+footer p {
+    font-size: 15px;
+}
+.contact .heading-two h4 {
+    position: relative;
+    font-weight: 600;
+}
+.contact .heading-two h4::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    background-color: #0078FF;
+    left: 0;
+    bottom: -8px;
+}
+.contact textarea {
+    height: 180px;
+    margin: 15px 0;
+    padding: 5px 12px;
+    border: 1px solid rgb(223, 218, 218);
+    outline: none;
+}
+.contact form input {
+    margin: 15px 0;
+    padding: 5px 12px;
+    border: 1px solid rgb(223, 218, 218);
+    outline: none;
+
+}
+.contact  input:focus,
+.contact  textarea:focus {
+    outline: 1px solid #0078FF;
+    box-shadow: 1px 1px 7px 2px #0078FF;
+}
+.contact ul li {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #0078FF;
+    background-color: white;
+    color: black;
+    position: relative;
+    transition: all 300ms linear;
+}
+.contact ul li i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 28px;
+}
+.contact ul li:hover {
+    border: 3px solid #99c3f3;
+    background-color: #0078FF;
+    color: white;
+}
